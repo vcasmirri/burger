@@ -1,0 +1,25 @@
+{
+  "name": "burger",
+  "version": "1.0.0",
+  "description": "A restaurant app called \"Eat-Da-Burger\" where users can input names of burgers they'd like to eat, then eat them.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vcasmirri/burger.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vcasmirri/burger/issues"
+  },
+  "homepage": "https://github.com/vcasmirri/burger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.0",
+    "mysql": "^2.18.1"
+  }
+}

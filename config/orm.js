@@ -33,8 +33,8 @@ function printQuestionMarks(num) {
 var orm = {
     // display all the burgers
     selectAll: function(tableInput, cb) {
-        var queryCommand = "SELECT * FROM " + tableInput + ";";
-        connection.query(queryCommand, function(err, result) {
+        var queryString = "SELECT * FROM " + tableInput + ";";
+        connection.query(queryString, function(err, result) {
             if (err) {
                 throw err;
             }
@@ -44,9 +44,9 @@ var orm = {
 
     // make new burger
     insertOne: function(burger_name, cb) {
-        var queryCommand = "INSERT INTO burgers (burger_name) VALUES (?)";
-        console.log(queryCommand);
-        connection.query(queryCommand, [burger_name], function(err, result) {
+        var queryString = "INSERT INTO burgers (burger_name) VALUES (?)";
+        console.log(queryString);
+        connection.query(queryString, [burger_name], function(err, result) {
             if (err) {
                 throw err;
             }
@@ -55,8 +55,8 @@ var orm = {
     },
     // devour burger
     updateOne: function(table, condition, cb){
-        var queryCommand = "UPDATE " + table + " SET devoured = true  WHERE id = ?";
-        connection.query(queryCommand,[condition], function(err, result) {
+        var queryString = "UPDATE " + table + " SET devoured = true  WHERE id = ?";
+        connection.query(queryString,[condition], function(err, result) {
           if (err) {
             throw err;
           }
