@@ -2,7 +2,7 @@
 
 var express = require("express");
 
-var router = express.Routerp();
+var router = express.Router();
 
 var burgerFunctions = require("..models/burger.js");
 

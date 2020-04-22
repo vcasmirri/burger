@@ -1,0 +1,56 @@
+{{!-- Title Row --}}
+
+<div class ="container">
+    <div class="row">
+        <div class = "col-12 text-center" id="top">
+            <h1>Devour some unforgettable burgers!</h1>
+        </div>
+    </div>
+</div>
+
+<img id="img" src="/assets/burger.jpg" width="200px" height="200px">
+<div class = "col-12 text-center" class="action">
+<div class="row d-flex">
+    {{#each burger_data}}
+    {{unless this.devoured}}
+    <div style="display:flex">
+        <div class="col-xm text-center">
+            <div class="burger">
+                {{this.burger_name}}
+            </div>
+         </div>
+
+         <div class="col-xm text-center">
+            <form method="POST" action="/burgers/update?_method=PUT" class="button-size">
+            <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+            <br>
+            <button type="submit" class="btn btn-default submit">DEVOUR THE BURGER!</button>
+          </form>
+         </div>
+</div>
+   {{/unless}}
+      {{/each}}
+</div>
+<div class="d-flex justify-content-center flex-wrap task">
+        {{#each burger_data}}
+          {{#if this.devoured}}
+        <div class="devouredContainers">
+          <div class="devouredBurger">
+            {{this.burger_name}}
+          </div>
+        </div>
+        {{/if}}
+        {{/each}}  
+</div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-xl-6 text-center enter_section" style="margin:auto">
+      <form action="/burgers/add" method="POST">
+        <input type="text" name="burger_name" class="form-control" value="" id="enter_text" placeholder="Enter the burger you want!">
+        <button type="submit" class="btn btn-primary" id="text-enter-button">ADD THE BURGER</button>   
+      </form>
+    </div>
+  </div>
+</div>

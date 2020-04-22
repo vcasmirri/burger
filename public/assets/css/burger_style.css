@@ -1,0 +1,57 @@
+#top-bar {
+    height: 100px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+ }
+ #img { 
+    display:block;
+    margin:auto;
+ }
+ 
+ .devouredContainers {
+    margin: 14px;
+    display:flex !important;
+ }
+ .burger {
+    background-color: rgb(197, 46, 46);
+    height: 75px;
+    width: 150px;
+    display:flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+    margin: 14px;
+ 
+ }
+ .submit {
+    height: 30px;
+    background-color: brown;
+    color: white;
+    border-radius: 10px;
+    display:flex;
+ }
+ .devouredBurger {
+    background-color: white;
+    height: 75px;
+    width: 150px;
+    display: flex;
+    font-size: 25px;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    border-radius: 10px;
+ }
+ 
+ body {
+    background-image: linear-gradient(red, yellow);
+    background-repeat: no-repeat;  
+    background-size: cover; /* Resize the background image to cover the entire container */
+ }
+ 
+ #text-enter-button {
+    background-color: brown;
+ }
